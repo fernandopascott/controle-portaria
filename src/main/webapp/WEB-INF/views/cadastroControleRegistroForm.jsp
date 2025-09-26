@@ -25,13 +25,13 @@
 			
 			$("#idSalvar").click(function(){
 				if(validaCamposSalvar()){
-					$('#formId').prop('action',"/controle_portaria/salvarControleRegistro");
+					$('#formId').prop('action',"/controle-portaria/salvarControleRegistro");
 			    	$('#formId').submit();
 				}		    	
 		    }); 
 			
 			$("#idExcluir").click(function(){
-				$('#formId').prop('action',"/controle_portaria/excluirControleRegistro");
+				$('#formId').prop('action',"/controle-portaria/excluirControleRegistro");
 				$('#formId').submit();
 			});
 			

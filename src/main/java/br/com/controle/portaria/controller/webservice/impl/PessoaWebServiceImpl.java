@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.inject.Inject;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,15 +18,15 @@ import br.com.controle.portaria.model.Pessoa;
 import br.com.controle.portaria.services.ServiceInterfaceAbstract;
 
 @RestController
-public class PessoaWebServiceImpl implements WebServiceInterface<Pessoa>{
+public class PessoaWebServiceImpl implements WebServiceInterface<Pessoa> {
 
-	@Inject
+	@Autowired
 	private ServiceInterfaceAbstract<Pessoa> service;
-	
+
 	@Override
 	public void dataBinding(WebDataBinder binder) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -36,20 +35,20 @@ public class PessoaWebServiceImpl implements WebServiceInterface<Pessoa>{
 		List<Pessoa> listaTipoPessoa = service.listar();
 		return listaTipoPessoa;
 	}
-	
+
 	@Override
 	@GetMapping("/carregarPessoaRest/{id}")
 	public Pessoa carregar(@PathVariable Integer id) {
 		Pessoa tipoPessoa = service.carregar(id);
 		return tipoPessoa;
 	}
-	
+
 	@GetMapping("/carregarPessoaRest/{nome}")
-	public List<Pessoa> carregar(@PathVariable("nome")String nome) {
+	public List<Pessoa> carregar(@PathVariable("nome") String nome) {
 		List<Pessoa> listPessoa = new ArrayList<Pessoa>();
-		if(nome != null && !"".equals(nome)){
+		if (nome != null && !"".equals(nome)) {
 			listPessoa = service.carregar("nome");
-		}		
+		}
 		return listPessoa;
 	}
 

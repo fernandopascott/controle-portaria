@@ -2,9 +2,9 @@ package br.com.controle.portaria.controller.web.impl;
 
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,44 +18,44 @@ import br.com.controle.portaria.model.TipoPessoa;
 import br.com.controle.portaria.services.ServiceInterface;
 
 @Controller
-public class TipoPessoaControllerImpl implements WebControllerInterface<TipoPessoa>{
-	
-	@Inject
+public class TipoPessoaControllerImpl implements WebControllerInterface<TipoPessoa> {
+
+	@Autowired
 	private ServiceInterface<TipoPessoa> service;
-	
+
 	@Override
 	public void dataBinding(WebDataBinder binder) {
 		// TODO Auto-generated method stub
 	}
 
 	@Override
-	@RequestMapping(value="/tipoPessoa")
+	@RequestMapping(value = "/tipoPessoa")
 	public String listar(Model model) {
-		//service = getInstance();
+		// service = getInstance();
 		List<TipoPessoa> listaTipoPessoa = service.listar();
-		model.addAttribute("listTipoPessoa", listaTipoPessoa);		
+		model.addAttribute("listTipoPessoa", listaTipoPessoa);
 		return "cadastroTipoPessoaForm";
 	}
-	
+
 	@Override
 	@RequestMapping(value = "/carregarTipoPessoa", method = RequestMethod.GET)
-	public String carregar(@RequestParam("idTipoPessoa")Integer idTipoPessoa, Model model) {
+	public String carregar(@RequestParam("idTipoPessoa") Integer idTipoPessoa, Model model) {
 		TipoPessoa tipoPessoa = new TipoPessoa();
-		if(idTipoPessoa != null){
-			//service = getInstance();
+		if (idTipoPessoa != null) {
+			// service = getInstance();
 			tipoPessoa = (TipoPessoa) service.carregar(idTipoPessoa);
 			model.addAttribute("tipoPessoa", tipoPessoa);
-		}		
+		}
 		return listar(model);
 	}
 
 	@Override
 	@RequestMapping(value = "/salvarTipoPessoa", method = RequestMethod.POST)
 	public String salvar(TipoPessoa tipoPessoa, BindingResult result, Model model, HttpSession session) {
-		//service = getInstance();
+		// service = getInstance();
 		service.salvar(tipoPessoa);
 		model.addAttribute("tipoPessoa", tipoPessoa);
-		if (result.hasErrors()) {			
+		if (result.hasErrors()) {
 			return "error";
 		}
 		return listar(model);
@@ -64,7 +64,7 @@ public class TipoPessoaControllerImpl implements WebControllerInterface<TipoPess
 	@Override
 	@RequestMapping(value = "/excluirTipoPessoa", method = RequestMethod.POST)
 	public String excluir(@RequestParam("cds") Integer[] cds, Model model) {
-		//service = getInstance();
+		// service = getInstance();
 		service.excluir(cds);
 		return listar(model);
 	}

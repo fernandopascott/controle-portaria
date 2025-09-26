@@ -51,15 +51,15 @@
 									role="button" data-bs-toggle="dropdown" aria-expanded="true">
 										Cadastro </a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<li><a class="dropdown-item" href="/controle_portaria/tipoPessoa">Tipo Pessoa</a></li>
-										<li><a class="dropdown-item" href="/controle_portaria/pessoa">Pessoa</a></li>
-										<li><a class="dropdown-item" href="/controle_portaria/veiculo">Veículo</a></li>
+										<li><a class="dropdown-item" href="/controle-portaria/tipoPessoa">Tipo Pessoa</a></li>
+										<li><a class="dropdown-item" href="/controle-portaria/pessoa">Pessoa</a></li>
+										<li><a class="dropdown-item" href="/controle-portaria/veiculo">Veículo</a></li>
 										<li><hr class="dropdown-divider"></li>
-										<li><a class="dropdown-item" href="/controle_portaria/imovelCondominio">Imóvel Condomínio</a></li>
+										<li><a class="dropdown-item" href="/controle-portaria/imovelCondominio">Imóvel Condomínio</a></li>
 										<li><hr class="dropdown-divider"></li>
-										<li><a class="dropdown-item" href="/controle_portaria/usuario">Usuário</a></li>
+										<li><a class="dropdown-item" href="/controle-portaria/usuario">Usuário</a></li>
 										<li><hr class="dropdown-divider"></li>
-										<li><a class="dropdown-item" href="/controle_portaria/logout">Logout/Sair</a></li>
+										<li><a class="dropdown-item" href="/controle-portaria/logout">Logout/Sair</a></li>
 									</ul>
 								</li>								
 							</ul>
@@ -69,7 +69,7 @@
 									role="button" data-bs-toggle="dropdown" aria-expanded="true">
 										Movimentos </a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<li><a class="dropdown-item" href="/controle_portaria/controleRegistro">Controle de Registros</a></li>
+										<li><a class="dropdown-item" href="/controle-portaria/controleRegistro">Controle de Registros</a></li>
 									</ul>
 								</li>								
 							</ul>

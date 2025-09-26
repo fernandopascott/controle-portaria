@@ -24,13 +24,13 @@
 			
 			$("#idSalvar").click(function(){
 				if(validaCamposSalvar()){
-					$('#formId').prop('action',"/controle_portaria/salvarTipoPessoa");
+					$('#formId').prop('action',"/controle-portaria/salvarTipoPessoa");
 			    	$('#formId').submit();
 				}		    	
 		    }); 
 			
 			$("#idExcluir").click(function(){
-				$('#formId').prop('action',"/controle_portaria/excluirTipoPessoa");
+				$('#formId').prop('action',"/controle-portaria/excluirTipoPessoa");
 				$('#formId').submit();
 			});
 			
@@ -98,7 +98,7 @@
 											<td class="text-center"><input type="checkbox"
 												name="cds" value="${tipoPessoa.id}" class="check"></td>
 											<td><a
-												href="/controle_portaria/carregarTipoPessoa?idTipoPessoa=${tipoPessoa.id}">${tipoPessoa.descricao}</a></td>
+												href="/controle-portaria/carregarTipoPessoa?idTipoPessoa=${tipoPessoa.id}">${tipoPessoa.descricao}</a></td>
 										</tr>
 									</c:forEach>
 								</tbody>

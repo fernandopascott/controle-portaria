@@ -36,7 +36,7 @@ public class SpringFoxConfig extends WebMvcConfigurationSupport {
 
 		ApiInfo apiInfo = new ApiInfo("Tech Dev Pascott", "WebService de Controle de Portaria.", "1.0", "Terms of Service",
 				new Contact("Fernando Pascott", "https://www.youtube.com/@tech_pascott",""),
-				"Apache License Version 2.0", "https://www.apache.org/licesen.html", new ArrayList<>());
+				"Apache License Version 2.0", "https://www.apache.org/license.html", new ArrayList<>());
 		return apiInfo;
 	}
 	
