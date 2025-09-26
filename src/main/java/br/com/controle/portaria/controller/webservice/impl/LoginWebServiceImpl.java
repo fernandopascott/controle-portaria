@@ -50,5 +50,5 @@ public class LoginWebServiceImpl {
 		session.invalidate();
 		return new ResponseEntity<Object>(HttpStatus.OK);
 	}
-	
+
 }

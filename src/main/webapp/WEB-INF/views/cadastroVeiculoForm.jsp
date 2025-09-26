@@ -25,14 +25,14 @@
 			$("#idSalvar").click(function(){
 				if(validaCamposSalvar()){
 					modal.show();
-					$('#formId').prop('action',"/controle_portaria/salvarVeiculo");
+					$('#formId').prop('action',"/controle-portaria/salvarVeiculo");
 			    	$('#formId').submit();
 			    	modal.hide();
 				}		    	
 		    }); 
 			
 			$("#idExcluir").click(function(){
-				$('#formId').prop('action',"/controle_portaria/excluirVeiculo");
+				$('#formId').prop('action',"/controle-portaria/excluirVeiculo");
 				$('#formId').submit();
 			});
 			
@@ -173,7 +173,7 @@
 												<input type="checkbox" name="cds" value="${veiculo.id}" class="check">
 											</td>	
 											<td>
-												<a href="/controle_portaria/carregarVeiculo?idVeiculo=${veiculo.id}">${veiculo.id}</a>
+												<a href="/controle-portaria/carregarVeiculo?idVeiculo=${veiculo.id}">${veiculo.id}</a>
 											</td>										
 											<td class="text-center">${veiculo.marca}</td>	
 											<td class="text-center">${veiculo.modelo}</td>	

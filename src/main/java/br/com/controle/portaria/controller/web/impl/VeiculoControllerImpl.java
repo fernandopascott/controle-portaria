@@ -1,8 +1,8 @@
 package br.com.controle.portaria.controller.web.impl;
 
-import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,9 +19,10 @@ import br.com.controle.portaria.services.ServiceInterface;
 @Controller
 public class VeiculoControllerImpl implements WebControllerInterface<Veiculo> {
 
-	@Inject
+	@Autowired
 	private ServiceInterface<Veiculo> service;
-	@Inject
+
+	@Autowired
 	private ServiceInterface<Pessoa> servicePessoa;
 
 //	private static synchronized ServiceInterface<Veiculo> getInstance() {
@@ -66,7 +67,7 @@ public class VeiculoControllerImpl implements WebControllerInterface<Veiculo> {
 		System.out.println(this.getClass().getName() + "#############salvar#########");
 		service.salvar(veiculo);
 		model.addAttribute("veiculo", veiculo);
-		
+
 		if (result.hasErrors()) {
 			return "error";
 		}

@@ -3,8 +3,7 @@ package br.com.controle.portaria.controller.webservice.impl;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.inject.Inject;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,15 +17,15 @@ import br.com.controle.portaria.model.Veiculo;
 import br.com.controle.portaria.services.ServiceInterface;
 
 @RestController
-public class VeiculoWebServiceImpl implements WebServiceInterface<Veiculo>{
+public class VeiculoWebServiceImpl implements WebServiceInterface<Veiculo> {
 
-	@Inject
+	@Autowired
 	private ServiceInterface<Veiculo> service;
 
 	@Override
 	public void dataBinding(WebDataBinder binder) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

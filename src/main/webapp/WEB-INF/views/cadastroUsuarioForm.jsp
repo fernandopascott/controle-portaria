@@ -24,13 +24,13 @@
 			
 			$("#idSalvar").click(function(){
 				if(validaCamposSalvar()){
-					$('#formId').prop('action',"/controle_portaria/salvarUsuario");
+					$('#formId').prop('action',"/controle-portaria/salvarUsuario");
 			    	$('#formId').submit();
 				}		    	
 		    }); 
 			
 			$("#idExcluir").click(function(){
-				$('#formId').prop('action',"/controle_portaria/excluirUsuario");
+				$('#formId').prop('action',"/controle-portaria/excluirUsuario");
 				$('#formId').submit();
 			});
 			
@@ -129,7 +129,7 @@
 												<input type="checkbox" name="cds" value="${usuario.id}" class="check">
 											</td>	
 											<td>
-												<a href="/controle_portaria/carregarUsuario?idUsuario=${usuario.id}">${usuario.id}</a>
+												<a href="/controle-portaria/carregarUsuario?idUsuario=${usuario.id}">${usuario.id}</a>
 											</td>										
 											<td class="text-center">${usuario.user}</td>
 											<td class="text-center">${usuario.pessoa.nome}</td>
